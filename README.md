@@ -21,7 +21,6 @@
    ```
    Для Vite: 
    npm run dev або yarn dev
-   Для create-react-app: npm start або yarn start
 
 ### P. S.
-Перейдіть на http://localhost:3000 (для create-react-app) або http://localhost:5173 (для Vite) для перегляду проєкту (посилання в терміналі).
+Перейдіть на http://localhost:5173 (для Vite) для перегляду проєкту (посилання в терміналі).
