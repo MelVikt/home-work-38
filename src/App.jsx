@@ -2,10 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './components/Button';
+import Input from './components/Input';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [inputValue, setInputValue] = useState('');
 
+  const onInputChange  = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const onButtonClick = () => {
+    alert(`Button clicked! Hello ${inputValue}`);
+  };
   return (
     <>
       <div>
@@ -16,18 +25,12 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="container">
+        <h1>Homework 38</h1>
+        <Input placeholder="Type name..." onChange={onInputChange}/>
+        <Button text="Click Me" onClick={onButtonClick}/>
+        <p>Text online: {inputValue}</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
